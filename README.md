@@ -1,9 +1,8 @@
 # T-LoRa Pager 飞行雷达 v3 （OpenSky数据版）
 
+<img width="1200" height="440" alt="hero" src="https://github.com/user-attachments/assets/19188a6e-e900-426a-843f-7230af727576" />
+
 适用设备：LilyGo T-LoRa Pager V1.0（ESP32-S3、16 MB Flash、8 MB PSRAM、ST7796U 480 × 222）。
-
-<img width="1268" height="732" alt="主界面" src="https://github.com/user-attachments/assets/dab36461-9423-456e-acd7-e6d9b5537137" />
-
 
 ## 本版功能
 
@@ -45,17 +44,4 @@ py -m esptool --chip esp32s3 --port COM7 --baud 460800 write-flash 0x0 TLoraPage
 ```
 烧录工具网址：https://esp.eterill.xyz/
 
-## 构建与验证
-
-- Arduino CLI 1.5.1
-- Arduino-ESP32 3.3.10（内含 ESP-IDF 5.5.4）
-- LilyGoLib 0.2.0
-- ArduinoJson 7.4.2
-- 板型 `esp32:esp32:tlora_pager`
-- Board Revision `Radio_SX1262`（本程序不初始化 LoRa）
-- 分区 `app3M_fat9M_16MB`
-- App 1,466,425 字节，占 3 MB App 分区 46%
-- 全局变量 59,672 字节，占内部动态内存 18%
-- App 与完整 16 MB 镜像经 esptool 5.3.0 检查：ESP32-S3、16 MB、80 MHz、DIO，校验和与 validation hash 有效
-
-用户已确认此前雷达主界面和 OpenSky 实时数据在实机工作。本版已完成编译和镜像静态检查；机型查询、最近机场、电量计读数、最终列对齐、亮度、深睡唤醒和待机电流仍需在实机验证。OpenSky、ADSBDB 与 Overpass 的 TLS 证书验证目前关闭；“关机”是深度睡眠，不是 PMU 完全断电。
+<img width="1268" height="732" alt="主界面" src="https://github.com/user-attachments/assets/dab36461-9423-456e-acd7-e6d9b5537137" />
