@@ -1,4 +1,4 @@
-# T-LoRa Pager 飞行雷达 v3 （OpenSky数据版）
+# T-LoRa Pager 飞行雷达（OpenSky数据版）
 
 <img width="1200" height="440" alt="hero" src="https://github.com/user-attachments/assets/19188a6e-e900-426a-843f-7230af727576" />
 
@@ -8,7 +8,7 @@
 
 - 主界面按 `S` 进入设置；`W` / `S` 移动，Enter 选择或确认，`Q` 取消或退出。
 - 设置页可扫描并选择 Wi-Fi，填写密码、中心经纬度、OpenSky Client ID、OpenSky Secret 和查询半径。
-- OpenSky Client ID 与 Secret 可同时留空，此时使用匿名访问；若使用认证，必须同时填写两项。OpenSky Secret 在列表和编辑时明文显示，便于核对；Wi-Fi 密码仍保持隐藏。
+- OpenSky Client ID 与 Secret 可同时留空，此时使用匿名访问；若使用认证，必须同时填写两项。OpenSky Secret 和WiFi密码在列表和编辑时明文显示，便于核对。
 - 设置保存到 NVS，重新启动后仍保留。OpenSky Secret 存在普通 NVS，未加密。
 - Wi-Fi 连接后通过 `pool.ntp.org` 和 `time.nist.gov` 同步中国标准时间（东八区，UTC+8）；同步期间主界面显示 `WIFI:NTP`，成功后显示 `WIFI:OK`。
 - 主界面显示 BQ27220 电量百分比；飞机型号通过 ADSBDB 的 ICAO24 查询补充并在内存中缓存，每轮 OpenSky 更新最多查询 3 架未缓存飞机。
